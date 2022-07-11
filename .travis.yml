@@ -1,0 +1,30 @@
+# используем язык java. Travis CI поддерживает другие языки тоже.
+language: java
+jdk:
+  - openjdk11
+
+services:
+  - postgresql
+
+before_install:
+  - psql -c 'create database job4j_cars_test;' -U postgres
+
+# используем режим обычного пользователя для сборки проекта.
+sudo: false
+
+# после выполнения сборки запустить скрипт, который будет собирать статистику по JaCoCo
+# Здесь используется сторонни сервис https://codecov.io/
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+# Отправлять уведомление на почту gogleR@smtp.com(Изменить на свою) если сборка упала
+notifications:
+  email:
+    recipients:
+      - akulmmm@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
+
+env:
+  global:
+    - CODECOV_TOKEN="4099019d-5e8b-4f74-85f4-559704e5e360"

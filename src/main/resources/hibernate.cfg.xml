@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/cars_market</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">a123123</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+
+        <mapping class="com.andr.model.car.Car" />
+        <mapping class="com.andr.model.car.CarEngineType" />
+        <mapping class="com.andr.model.car.CarBodyType" />
+        <mapping class="com.andr.model.car.CarModel" />
+        <mapping class="com.andr.model.City" />
+        <mapping class="com.andr.model.User" />
+        <mapping class="com.andr.model.car.CarPhoto" />
+        <mapping class="com.andr.model.car.CarTransmissionBoxType" />
+        <mapping class="com.andr.model.annoucement.AnnouncementType" />
+        <mapping class="com.andr.model.annoucement.Announcement" />
+    </session-factory>
+</hibernate-configuration>

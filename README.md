@@ -1,7 +1,4 @@
 # #Marketplace_cars
-[![Build Status](https://travis-ci.org/ReyBos/job4j_cars.svg?branch=master)](https://travis-ci.org/ReyBos/job4j_cars) &nbsp;&nbsp;
-[![codecov](https://codecov.io/gh/ReyBos/job4j_cars/branch/master/graph/badge.svg?token=7914PLM7N1)](https://codecov.io/gh/ReyBos/job4j_cars)
-
 <p>
   This application is a market platform for the sale of cars. Each user can add new ads
 about the sale, change their status. The main page of the application contains all active
